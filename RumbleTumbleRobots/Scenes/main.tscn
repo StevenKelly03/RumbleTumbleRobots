@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://bldbpubhw4nb6"]
+[gd_scene load_steps=37 format=3 uid="uid://bldbpubhw4nb6"]
 
 [ext_resource type="Texture2D" uid="uid://cdqemgrk5sb4g" path="res://Assets/Images/Arena/arena.jpg" id="1_jjgbg"]
 [ext_resource type="Script" uid="uid://uwujthm5hs1c" path="res://Scenes/blue_actions.gd" id="2_21xkr"]
@@ -106,6 +106,12 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hibaj"]
 size = Vector2(13.3559, 30.6322)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6bp64"]
+bg_color = Color(0, 0, 0, 0.682353)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_344ge"]
+bg_color = Color(0, 0.114584, 0.999999, 1)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_pdsj5"]
 atlas = ExtResource("4_6bp64")
 region = Rect2(0, 0, 34, 37)
@@ -195,6 +201,12 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ynf5e"]
+bg_color = Color(0, 0, 0, 0.682353)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hptm8"]
+bg_color = Color(1, 0, 0, 1)
+
 [node name="Main" type="Node2D"]
 
 [node name="Background" type="Sprite2D" parent="."]
@@ -232,6 +244,18 @@ visible = false
 position = Vector2(1.59001, 2.58041)
 shape = SubResource("RectangleShape2D_hibaj")
 
+[node name="HealthBar" type="ProgressBar" parent="Blue"]
+offset_left = 0.571
+offset_top = -51.78
+offset_right = 109.571
+offset_bottom = -24.78
+scale = Vector2(-1, -1)
+theme_override_styles/background = SubResource("StyleBoxFlat_6bp64")
+theme_override_styles/fill = SubResource("StyleBoxFlat_344ge")
+value = 100.0
+fill_mode = 1
+show_percentage = false
+
 [node name="Red" type="CharacterBody2D" parent="."]
 position = Vector2(515, 464)
 scale = Vector2(4.717, 5.813)
@@ -249,6 +273,17 @@ position = Vector2(-1.90783, 2.58027)
 scale = Vector2(0.999922, 0.999941)
 shape = SubResource("RectangleShape2D_hibaj")
 debug_color = Color(0.943043, 8.27849e-06, 0.603413, 0.42)
+
+[node name="HealthBar" type="ProgressBar" parent="Red"]
+offset_left = 24.3799
+offset_top = -78.9609
+offset_right = 133.38
+offset_bottom = -51.9609
+theme_override_styles/background = SubResource("StyleBoxFlat_ynf5e")
+theme_override_styles/fill = SubResource("StyleBoxFlat_hptm8")
+value = 100.0
+fill_mode = 1
+show_percentage = false
 
 [connection signal="animation_finished" from="Blue/Sprite" to="Blue" method="_on_sprite_animation_finished"]
 [connection signal="animation_finished" from="Red/Sprite" to="Red" method="_on_sprite_animation_finished"]
