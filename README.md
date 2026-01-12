@@ -22,10 +22,13 @@ Variables
 -Health (player and enemy)
 -Cooldown_Punch
 -Cooldown_Dodge
--Ratio (punch to dodge)
+-TimeToWin
 
 Hypotisis
-If we lower the Cooldown_Dodge then the Ratio will increase towards dodges, because it will give benifits to not spamming punch.
+If we lower the Cooldown_Dodge then the TimeToWin will decrease, because it will give benifits to not spamming punch.
 
 Goal 
 Is to have Ratio be around or close to 50/50
+
+Result 
+The cooldown slows down games more than it speeds them up making the games take longer

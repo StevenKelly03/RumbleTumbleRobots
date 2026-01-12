@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://bldbpubhw4nb6"]
+[gd_scene load_steps=37 format=3 uid="uid://bldbpubhw4nb6"]
 
 [ext_resource type="Texture2D" uid="uid://cdqemgrk5sb4g" path="res://Assets/Images/Arena/arena.jpg" id="1_jjgbg"]
 [ext_resource type="Script" uid="uid://uwujthm5hs1c" path="res://Scenes/blue_actions.gd" id="2_21xkr"]
@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://b4m1atbnki834" path="res://Assets/Images/Player/Red_Defeat.png" id="4_6bp64"]
 [ext_resource type="Script" uid="uid://y7ks0geocs3o" path="res://Scenes/red_actions.gd" id="5_6bp64"]
 [ext_resource type="Texture2D" uid="uid://cugmthhg4ki24" path="res://Assets/Images/Player/Red_Punch.png" id="5_344ge"]
-[ext_resource type="Script" uid="uid://w5x7u6pr17qo" path="res://Scenes/match_manager.gd" id="8_344ge"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jjgbg"]
 size = Vector2(837.75, 46)
@@ -293,9 +292,6 @@ offset_right = 1118.0
 offset_bottom = 387.0
 action_mode = 0
 text = "Npc mode"
-
-[node name="MatchManager" type="Node" parent="."]
-script = ExtResource("8_344ge")
 
 [connection signal="animation_finished" from="Blue/Sprite" to="Blue" method="_on_sprite_animation_finished"]
 [connection signal="animation_finished" from="Red/Sprite" to="Red" method="_on_sprite_animation_finished"]
