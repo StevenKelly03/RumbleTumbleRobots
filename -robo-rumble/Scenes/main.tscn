@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://bldbpubhw4nb6"]
+
+[ext_resource type="Texture2D" uid="uid://cdqemgrk5sb4g" path="res://Assets/Images/Arena/arena.jpg" id="1_jjgbg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jjgbg"]
+size = Vector2(837.75, 46)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bo1nx"]
+size = Vector2(32, 169)
+
+[node name="Main" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(573, 329)
+scale = Vector2(1.35648, 1.28627)
+texture = ExtResource("1_jjgbg")
+
+[node name="Floor" type="CollisionShape2D" parent="Background"]
+position = Vector2(-4.79175, 210.686)
+scale = Vector2(0.737201, 0.777439)
+shape = SubResource("RectangleShape2D_jjgbg")
+
+[node name="RightBounds" type="CollisionShape2D" parent="Background"]
+position = Vector2(276.451, 167.149)
+scale = Vector2(0.737201, 0.777439)
+shape = SubResource("RectangleShape2D_bo1nx")
+
+[node name="LeftBounds" type="CollisionShape2D" parent="Background"]
+position = Vector2(-277.925, 157.043)
+scale = Vector2(0.737201, 0.777439)
+shape = SubResource("RectangleShape2D_bo1nx")
