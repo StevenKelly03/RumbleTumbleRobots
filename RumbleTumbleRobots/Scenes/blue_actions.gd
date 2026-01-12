@@ -7,12 +7,28 @@ var DODGE_DIST := 50
 var is_punching := false
 var is_dodging := false
 
-func _process(_delta):
-	if not is_punching and not is_dodging:
-		if Input.is_action_just_pressed("Blue_Punch"):
-			punch()
-		if Input.is_action_just_pressed("Blue_Dodge"):
-			dodge()
+const PUNCH_COOLDOWN := 1.5
+const DODGE_COOLDOWN := 0.4
+
+var action_cd := 0.0  # blocks ALL actions while > 0
+
+func _process(delta):
+	# count global cooldown down
+	if action_cd > 0.0:
+		action_cd -= delta
+		return # cooldown active: block all actions
+
+	# block input while current action is happening
+	if is_punching or is_dodging:
+		return
+
+	if Input.is_action_just_pressed("Blue_Punch"):
+		punch()
+		action_cd = PUNCH_COOLDOWN
+
+	elif Input.is_action_just_pressed("Blue_Dodge"):
+		dodge()
+		action_cd = DODGE_COOLDOWN
 
 func punch():
 	is_punching = true
