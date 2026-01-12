@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cugmthhg4ki24"
-path="res://.godot/imported/Red_Punch.png-413ebf0238ee7688007ff996c0968620.ctex"
+uid="uid://y3oip6eslm50"
+path="res://.godot/imported/Blue_Punch.png-3489c884b141547aba62f2b408261cd1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Images/Player/Red_Punch.png"
-dest_files=["res://.godot/imported/Red_Punch.png-413ebf0238ee7688007ff996c0968620.ctex"]
+source_file="res://Assets/Images/Blue_Punch.png"
+dest_files=["res://.godot/imported/Blue_Punch.png-3489c884b141547aba62f2b408261cd1.ctex"]
 
 [params]
 
