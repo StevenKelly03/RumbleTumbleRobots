@@ -25,4 +25,7 @@ Variables
 -Ratio (punch to dodge)
 
 Hypotisis
-If we lower the Cooldown_Dodge then the Ratio will decrease, because it will give benifits to not spamming punch.
+If we lower the Cooldown_Dodge then the Ratio will increase towards dodges, because it will give benifits to not spamming punch.
+
+Goal 
+Is to have Ratio be around or close to 50/50
