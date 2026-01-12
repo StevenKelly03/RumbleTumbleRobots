@@ -1,7 +1,7 @@
 RUMBLE TUMBLE ROBOTS - SPECS
 
 Core Mechanics
--Hitting 
+-Punch 
 -Dodge
 -Health
 -Head pops off
@@ -17,6 +17,12 @@ Win loss conditions
 -Enemy health hits 0 = win
 
 Variables 
--Hitting state
--Dodging state
+-Punch_lenght
+-Dodge_lenght
 -Health (player and enemy)
+-Cooldown_Punch
+-Cooldown_Dodge
+-Ratio (punch to dodge)
+
+Hypotisis
+If we lower the Cooldown_Dodge then the Ratio will decrease, because it will give benifits to not spamming punch.
