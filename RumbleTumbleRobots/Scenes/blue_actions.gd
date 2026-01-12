@@ -7,18 +7,16 @@ var DODGE_DIST := 50
 var is_punching := false
 var is_dodging := false
 
-const PUNCH_COOLDOWN := 1.5
+const PUNCH_COOLDOWN := 0.5
 const DODGE_COOLDOWN := 0.4
 
-var action_cd := 0.0  # blocks ALL actions while > 0
+var action_cd := 0.0 
 
 func _process(delta):
-	# count global cooldown down
 	if action_cd > 0.0:
 		action_cd -= delta
-		return # cooldown active: block all actions
+		return
 
-	# block input while current action is happening
 	if is_punching or is_dodging:
 		return
 
